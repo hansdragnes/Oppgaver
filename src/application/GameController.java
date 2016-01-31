@@ -19,19 +19,19 @@ public class GameController {
 		
 		if (board[0][0]==1){
 			gc.setFill(Color.GREEN);
-			gc.fillRect(40, 10, 15, 15);
+			gc.fillRect(40, 10, 10, 10);
 		}
 		if (board[0][1]==1){
 			gc.setFill(Color.GREEN);
-			gc.fillRect(40, 30, 15, 15);
+			gc.fillRect(40, 20, 10, 10);
 		}
 		if (board[1][0]==1){
 			gc.setFill(Color.GREEN);
-			gc.fillRect(70, 10, 15, 15);
+			gc.fillRect(50, 10, 10, 10);
 		}
 		if (board[1][1]==1){
 			gc.setFill(Color.GREEN);
-			gc.fillRect(70, 30, 15, 15);
+			gc.fillRect(50, 20, 10, 10);
 		}
 		
 	}
