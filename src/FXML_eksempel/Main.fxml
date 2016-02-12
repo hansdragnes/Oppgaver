@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Slider?>
+
+<!-- Sett opp 2x2 grid layout -->
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="FXML_eksempel.MainController">
+	
+	<!-- Sett opp menybar -->
+	<VBox prefWidth="800" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" GridPane.rowSpan="1">
+	<MenuBar fx:id="menuBar" useSystemMenuBar="true">
+		<menus>
+			<Menu text="Fil">
+				<items>
+               		<MenuItem text="Lukk" onAction="#exitEvent" />
+				</items>
+			</Menu>
+		</menus>
+	</MenuBar>
+	</VBox>
+	
+	<!-- Sett opp "canvas" for å tegne grafikk -->
+	<HBox styleClass="graphics" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="1" GridPane.rowSpan="1">
+		<stylesheets><URL value="@application.css" /></stylesheets>
+		<Canvas fx:id="graphics" onMouseDragged="#mouseDragged" width="700" height="600" />
+	</HBox>
+	
+	<!-- Sett opp ulike knapper og slidere -->
+	<VBox GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="1" GridPane.rowSpan="1" spacing="20">
+		<padding><Insets top="30" right="20" bottom="0" left="20"/></padding>
+		<Button text="Klar" onAction="#clearEvent" />
+		<ColorPicker fx:id="colorPicker" onAction="#newColorEvent" />
+		<Slider value="5.0" max="100.0" min="1.0" fx:id="sizeSlider" onMouseDragged="#newSizeEvent" />
+	</VBox>
+	
+</GridPane>

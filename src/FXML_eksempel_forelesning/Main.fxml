@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+	
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML_eksempel_forelesning.MainController">
+
+<children>
+
+<MenuBar GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"
+			prefWidth="400">
+
+<menus>
+
+<Menu text="Menu 1">
+
+<items>
+
+<MenuItem text="Valg 1" onAction="#handleChoice1" ></MenuItem>
+<MenuItem text="Valg 2"></MenuItem>
+
+</items>
+
+</Menu>
+
+</menus>
+
+</MenuBar>
+
+<Button GridPane.rowIndex="1" GridPane.columnIndex="0" text="KNAPP 1" 
+		prefHeight="100" prefWidth="100" 
+		onMousePressed="#handleButton1Event" 
+		fx:id="button1" >
+</Button>
+
+<Button GridPane.rowIndex="2" GridPane.columnIndex="0" text="KNAPP 2" 
+		GridPane.columnSpan="2"
+		prefHeight="50" prefWidth="300" >
+</Button>
+
+<VBox GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+<Button text="KNAPP 3" prefHeight="50" prefWidth="200" >
+</Button>
+
+<Button text="KNAPP 4" prefHeight="50" prefWidth="200" >
+</Button>
+
+</VBox>
+
+</children>
+
+</GridPane>
