@@ -10,20 +10,19 @@ public class oppg4main {
 		boolean currentCell = false;
 		boolean alive = false;
 		
-		if (ng.isAlive(1, 1))	{
-			System.out.println("Current gen:");
-			System.out.println("Currentcell is alive: "+currentCell);
-			System.out.println("Nbours: "+ng.countNeighbours());
-			System.out.println("Will be alive next gen: "+ng.staysAlive());
-		}
+		int x = 2;
+		int y = 1;
 		
-		else	{
-			System.out.println("\nWas not alive\n Next gen:\n");
-			if (ng.born())
-				System.out.println("Turns to life"+" ( "+ng.countNeighbours()+" naboer)");
-			else
-				System.out.println("Stays dead"+" ( "+ng.countNeighbours()+" naboer)");
-		}
+		System.out.println("Current gen");
+		System.out.println("Cell is alive: "+ng.isAlive(x,y));
+		System.out.println("Nbours: "+ng.countNeighbours(x, y));
+			
+		System.out.println("\nNext gen:");
+		System.out.println("Cell will be alive: "+ng.cellstatusNextgeneration(x, y));
+		
+		
+//		System.out.println("\nCurrent board: "+gb.toString());
+//		System.out.println("String: " + gb.toString());
 		
 	}
 

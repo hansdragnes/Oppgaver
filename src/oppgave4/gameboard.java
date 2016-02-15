@@ -2,12 +2,18 @@ package oppgave4;
 
 import java.util.Arrays;
 
+/**
+ * Test class. Provides a default table and possibility to set and get the table.
+ * @author hd
+ *
+ */
 public class gameboard {
 
 	int[][] table = 
-			new int [][]	{{0,0,0},
-		 					{1,1,1},
-		 					{1,1,0}
+			new int [][]	{{0,0,0,1},
+							 {1,0,0,1},
+		 					 {1,0,0,0},
+		 					 {1,0,0,0}
 							};
 
 	public int[][] getTable() {
